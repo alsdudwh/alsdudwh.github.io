@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>나에 대해 소개하기</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            header {
+                background-color: #939805;
+                color: white;
+                padding: 15px 20px;
+                text-align: center;
+            }
+            nav {
+                background-color: #333;
+                color: white;
+                padding: 10px 20px;
+            }
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                gap: 15px;
+            }
+            nav ul li {
+                display: inline;
+            }
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            nav ul li a:hover {
+                text-decoration: underline;
+            }
+            .content {
+                margin: 20px;
+                padding: 20px;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 10px;
+                text-align: left;
+            }
+            th {
+                background-color: #f4f4f4;
+                font-weight: bold;
+            }
+            .hidden {
+                display: none;
+            }
+            footer {
+                background-color: #a8c030;
+                color: white;
+                text-align: center;
+                padding: 10px 20px;
+                margin-top: 20px;
+            }
+            textarea, button {
+                width: 100%;
+                margin-top: 10px;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                resize: none;
+                cursor: pointer;
+            }
+            button {
+
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function showContent(id) {
+                // 모든 컨텐츠를 숨김
+                const sections = document.querySelectorAll('.content');
+                sections.forEach(section => section.classList.add('hidden'));
+
+                // 선택된 컨텐츠를 표시
+                const selectedSection = document.getElementById(id);
+                selectedSection.classList.remove('hidden');
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>나에 대해 소개하기</h1>
+            <p style="text-align: right;">학번: 202403887, 이름: 민영조</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a onclick="showContent('major')">학과 소개</a></li>
+                <li><a onclick="showContent('favorites')">좋아하는 것</a></li>
+                <li><a onclick="showContent('goal')">목표</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <aside>
+                <h3>경고</h3>
+                <p>이 페이지는 저자에 대한 개인정보를 담고 있습니다. 주의해주시면 감사하겠습니다.</p>
+            </aside>
+        </div>
+        <section>
+            <div id="major" class="content">
+                <table>
+                    <tr>
+                        <th style="width: 130px">재학 중인 학과</th>
+                        <td>생명정보융합학과</td>
+                    </tr>
+                    <tr>
+                        <th>학과개요</th>
+                        <td>생명정보융합학과는 최첨단의 생명과학기술을 중심으로 가속화되는 바이오산업분야의 발전을 주도할 인재 양성을 목표로 바이오 기반 빅데이터를 활용하는 바이오헬스, 합성생물학 및 다양한 생명과학 분야를 아우르는 첨단분야 전공과정을 포함한 미래 지향적인 학과입니다.
+                            <hr>
+                            생명과학분야 첨단기술들의 융복합적 접근이 요구되는 질병 치료, 식량 문제, 환경 문제 등 인류 복지에 기여하기 위해 통합형인재 육성을 위한 다학제형 교육과정을 운영합니다.</td>
+                    </tr>
+                    <tr>
+                        <th>졸업 후 진로</th>
+                        <td>졸업 후 생명과학 및 컴퓨터를 활용한 생물정보분석 분야의 전공지식을 기반으로 신약개발 제약회사, 헬스케어 관련 기업, 인공지능 관련 전문기업, 바이오분야 산업체 및 관련 공무원 등으로 진출할 수 있습니다.
+                            <hr>
+                            특히, 충남대 내 생명과학과와 바이오AI융합학과 대학원에 진학하여 더 높은 단계의 연구경험을 축적하는 경우, 생명과학 관련 국가연구소, 제약 및 식품 환경분야 산업체 연구원, 대학의 교수 등 다양한 분야의 전문가로써 성장이 가능합니다.
+                            <hr>
+                            최근 우리나라의 기초학문 및 첨단과학의 심장부라 일컬어지는 대덕연구단지에 생명과학 연구소 및 바이오 벤처회사들이 집중됨에 따라 지역 내에서 생명과학, 생명정보, 빅데이터, 인공지능 분야의 전문인력에 대한 수요가 급증하고 있습니다. 창의력과 응용력을 바탕으로 전문성을 갖춘 본 학과 및 대학원 진학자들이 여러 분야에서 두각을 나타낼 것으로 기대하고 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <th>이수 체계도, 교과과정</th>
+                        <td>-이수 체계도 및 교과과정 사진<hr><figure><img src="웹프/img-system" width=""></figure></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="favorites" class="content hidden">
+                <table>
+                    <tr>
+                        <th style="width: 100px;">좋아하는 음식</th>
+                        <td>
+                            <article>1. 떡볶이 - 이유: 함께 먹을 때 가장 보편적이고 대체적으로 좋아해서<figure><img src=""></figure></article>
+                            <article>2. 김밥 - 이유: 비교적 싸고 간편하게 먹을 수 있어서<figure><img src=""></figure></article>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>좋아하는 노래</th>
+                        <td>
+                            <article>1. Dynamite (BTS) - 이유: 밝고 신나는 느낌이 좋아서</article>
+                            <article>2. Viva La Vida (Coldplay) - 이유: 가사가 판타지적인데 삶에 대한 고찰을 담아서</article>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="goal" class="content hidden">
+                <table>
+                    <tr>
+                        <th style="width: 90px;">원하는 직업</th>
+                        <td>생명공학연구원, 생명정보학자</td>
+                    </tr>
+                    <tr>
+                        <th>이유</th>
+                        <td>평소에 실험과 연구에 호기심과 관심을 느껴왔으며, 전공이자 관심분야인 생물학과 생명정보학을 배우며 즐거움을 느끼고, KOBIC 등 다양한 기업체에 대해 탐구하면서 그 흥미가 증폭되어서</td>
+                    </tr>
+                </table>
+            </div> 
+        </section>
+        <footer>
+            <h2>Q n A</h2>
+            <p>저에게 궁금한 점이 있으면 아래에 작성해 주세요!</p>
+            <form action="#" method="post" style="margin-top: 10px;">
+                <label for="user-question" style="display: block; font-weight: bold; margin-bottom: 5px;">질문 입력:</label>
+                <textarea id="user-question" name="user-question" rows="4" placeholder="여기에 질문을 입력하세요." 
+                          style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; resize: none;"></textarea>
+                <div style="text-align: center; margin-top: 10px;">
+                    <button type="submit" style="padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; background-color: #d4c51c; color: white; cursor: pointer;">질문 제출</button>
+                </div>
+            </form>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const form = document.querySelector("form");
+                
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    alert("질문해 주셔서 감사합니다!");
+                    form.reset();
+                });
+            });
+        </script>
+    </body>
+</html>
